@@ -8,9 +8,9 @@ You can open the edit "Looks" window and just minimise it - but, be careful to *
 
 ![Screenshot](Pro7LooksHelper-Win10UIA/Screenshot1.png)
 
-To move the window, click and drag the "Lorax/Looks" icon!
+To move the window, click and drag on the Looks (Lorax) icon. To close, right-click the app icon in taskbar.
 
-Download prebuilt application in [releases](https://github.com/greyshirtguy/Pro7LooksHelper-Win10UIA/releases)
+You can download a prebuilt application in [releases](https://github.com/greyshirtguy/Pro7LooksHelper-Win10UIA/releases)
 
-It has been made with same background color as Pro7 toolbar - so you position the app on top of Pro7 and make it look "native"!
+It has been made with same background color as Pro7 toolbar - so you can optionally position the app on top of Pro7 and make it look "at home" on the Pro7 toolbar.
 ![Screenshot](Pro7LooksHelper-Win10UIA/Screenshot-OverPro7.png)
