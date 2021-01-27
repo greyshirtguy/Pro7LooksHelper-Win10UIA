@@ -175,6 +175,11 @@ namespace Pro7LooksHelper_Win10UIA
             {
                 // Invoke the menu for selected look (indexes match)
                 (aeLiveMenuItems[cboLooks.SelectedIndex].GetCurrentPattern(InvokePatternIdentifiers.Pattern) as InvokePattern).Invoke();
+
+                // Put focus back on Pro7
+                if (aeProPresenter != null) {
+                    aeProPresenter.SetFocus();
+                }
             }
         }
 
