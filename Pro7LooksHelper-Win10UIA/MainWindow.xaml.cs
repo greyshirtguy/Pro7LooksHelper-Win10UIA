@@ -136,6 +136,10 @@ namespace Pro7LooksHelper_Win10UIA
             // Let's get all the sub menuitems of the Screens menu...
             AutomationElementCollection aecScreensMenuItems = aeScreensMenu.FindAll(TreeScope.Children, new PropertyCondition(AutomationElement.ControlTypeProperty, ControlType.MenuItem));
 
+            // TODO: handle failure to get menu items better than this! (for now, just bail)
+            if (aecScreensMenuItems.Count < 3)
+                return;
+
             // If UI changes in design, this code will break - it assumes Looks menu is at index 2 of the screens menu items.
             // The third sub menuitem of the Screens menu is the Live:Look menu (well, at least in Pro7.4.1 - this may change in future)
             AutomationElement liveMenu = aecScreensMenuItems[2];
@@ -171,7 +175,7 @@ namespace Pro7LooksHelper_Win10UIA
 
         private void cboLooks_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (cboLooks.Items.Count > 0)
+            if (cboLooks.Items.Count > 0 && aeLiveMenuItems[cboLooks.SelectedIndex].Current.IsEnabled)
             {
                 // Invoke the menu for selected look (indexes match)
                 (aeLiveMenuItems[cboLooks.SelectedIndex].GetCurrentPattern(InvokePatternIdentifiers.Pattern) as InvokePattern).Invoke();
